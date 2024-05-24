@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    transition: background-color .4s ease-in;
+    background-color: #c394f8;
+}
+
+input {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-height: 500px;
+    max-width: 400px;
+    transform-style: preserve-3d;
+}
+
+.card {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    /* right: 0;
+    left: 0; */
+    margin: 0;
+    transition: transform .4s ease;
+    cursor: pointer;
+}
+
+.cards {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+img {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+#card-1:checked ~ .cards #volcano,
+#card-2:checked ~ .cards #forest,
+#card-3:checked ~ .cards #desert,
+#card-4:checked ~ .cards #savanna,
+#card-5:checked ~ .cards #mountain {
+    transform: translateX(-40%) scale(.8);
+    opacity: 1;
+    z-index: -1;
+}
+
+#card-1:checked ~ .cards #desert,
+#card-2:checked ~ .cards #savanna,
+#card-3:checked ~ .cards #mountain,
+#card-4:checked ~ .cards #volcano,
+#card-5:checked ~ .cards #forest {
+    transform: translateX(40%) scale(.8);
+    opacity: 1;
+    z-index: -1;
+}
+
+
+#card-1:checked ~ .cards #mountain,
+#card-2:checked ~ .cards #volcano,
+#card-3:checked ~ .cards #forest,
+#card-4:checked ~ .cards #desert,
+#card-5:checked ~ .cards #savanna {
+    transform: translateX(-70%) scale(.8);
+    opacity: 1;
+    z-index: -2;
+}
+
+#card-1:checked ~ .cards #savanna,
+#card-2:checked ~ .cards #mountain,
+#card-3:checked ~ .cards #volcano,
+#card-4:checked ~ .cards #forest,
+#card-5:checked ~ .cards #desert {
+    transform: translateX(70%) scale(.8);
+    opacity: 1;
+    z-index: -2;
+}
+
+#card-1:checked ~ .cards #forest,
+#card-2:checked ~ .cards #desert,
+#card-3:checked ~ .cards #savanna,
+#card-4:checked ~ .cards #mountain,
+#card-5:checked ~ .cards #volcano {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 0;
+}
+
+.card-text-area {
+    background-color: #fff;
+    border-radius: 8px;
+    min-width: 320px;
+    padding: 16px 10px;
+}
+
+.info-area {
+    
+}
+
+.card-info {
+    display: block;
+    width: calc(100%-200px);
+}
+

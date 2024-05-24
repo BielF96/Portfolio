@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100%;
+    background-color: #121212;
+    overflow: hidden;
+}
+
+input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 40%;
+    margin: 20px;
+    background: red;
+    scale: 1.2;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+
+.input-buttons input {
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform .4s ease;
+}
+
+.card[for=card-1] {
+    background-image: url(/images/ton618.png);
+}
+
+.card[for=card-2] {    
+    background-image: url(/images/pillars_of_creation.jpg)
+}
+
+.card[for=card-3] {
+    background-image: url(/images/Designer.jpeg);
+}
+
+.card article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card h1, p {
+    color: aliceblue;
+    text-shadow: black 2px 1px;
+}
+
+.article-tittle {
+    position: relative;
+    top: -27%;
+    font: oblique 2em 'Raleway', sans-serif;
+}
+
+#slider-1 .article-tittle {
+    position: relative;
+    left: 5%;
+    width: 700px;
+}
+
+#slider-2 .article-tittle {
+    position: relative;
+    left: 2%;
+    width: 600px;
+    text-align: start;
+}
+
+#slider-1 .article-text {
+    position: relative;
+    left: -45%;
+    width: 800px;
+    font: 1.2em  'Playfair Display', serif;
+}
+
+#slider-2 .article-text {
+    position: relative;
+    left: -43%;
+    width: 750px;
+    font: 1.2em  'Playfair Display', serif;
+    text-align: justify;
+}
+
+#slider-3 .article-text {
+    position: relative;
+    left: -52%;
+    width: 1200px;
+    font: 1.2em  'Playfair Display', serif;
+}
+
+
+
+#card-1:checked ~ .cards #slider-1,
+#card-2:checked ~ .cards #slider-2,
+#card-3:checked ~ .cards #slider-3 {
+    transform: translateX(0px);
+    z-index: 1;
+}
+
+#card-1:checked ~ .cards #slider-3,
+#card-2:checked ~ .cards #slider-1,
+#card-3:checked ~ .cards #slider-2 {
+    transform: translateX(100%);
+    z-index: 0;
+}
+
+#card-1:checked ~ .cards #slider-2,
+#card-2:checked ~ .cards #slider-3,
+#card-3:checked ~ .cards #slider-1 {
+    transform: translateX(100%);
+}

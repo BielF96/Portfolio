@@ -1,0 +1,85 @@
+:root {
+    --bg-color: #F9F6EE;
+    --text-color: #ffff;
+    --bg-filter: drop-shadow(0px -5px 3px rgba(0, 0, 0, 0.85));
+    --wrapper-top-pst: 10%;
+    --wrapper-left-pst: calc(50% - 200px);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.wrapper__fall {
+    position: absolute;
+    height: 250px;
+    width: 400px;
+    left: var(--wrapper-left-pst);
+    border-radius: 15px;
+    background-size: cover;
+    filter: var(--bg-filter);
+    animation: bg-fall 2s ease-in-out;
+}
+
+#fall-01 {
+    top: var(--wrapper-top-pst);
+    background: var(--bg-color) url(../../images/everest-pt01-2.png);
+    animation: bg-fall 2s ease-out;
+    filter: none;
+    z-index: 1;
+}
+
+#fall-02 {
+    top: calc(var(--wrapper-top-pst) + 20%);
+    background: url(../../images/everest-pt02-2.png) center center;
+    z-index: 2;
+}
+
+#fall-03 {
+    top: calc(var(--wrapper-top-pst) + 35%);
+    background: url(../../images/everest-pt03-2.png) center bottom;
+    z-index: 4;
+
+}
+
+
+@keyframes bg-fall {
+    from {
+        transform: translateY(-250%);
+    }
+}
+
+.fall-text {
+    top: calc(var(--wrapper-top-pst) + 30%);
+    font-size: 56px;
+    text-align: center;
+    color: var(--text-color);
+    animation: text-fall 2s ease-in-out;
+    z-index: 3;
+}
+
+@keyframes text-fall {
+    from {
+        transform: translateY(-170%);
+    }
+}

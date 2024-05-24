@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index-00-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Space 00</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="menu">
+                <ul class="menu__items">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Home</a>
+                        <span></span>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">About</a>
+                        <span></span>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Contact</a>
+                        <span></span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container__star-bg">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="shooting-star"></span>
+            </div>
+            <div class="container__title">
+                <h1>
+                    <span>Jupiter</span>
+                    <span>Moons</span>
+                </h1>
+            </div>
+            <div class="container__astros">
+                <div class="astros__jupiter">
+                    <div class="astros__io" style="--start-left-position: -10em; --end-left-position: 41em; --front-z-index: 1; --back-z-index: -1; --rotate-time: 9s; --orbit-time: 5s;"></div>
+                    <div class="astros__ganymede" style="--start-left-position: -15em; --end-left-position: 47.5em; --front-z-index: 3; --back-z-index: -3; --rotate-time: 16s; --orbit-time: 13s;"></div>
+                    <div class="astros__europa" style="--start-left-position: -13em; --end-left-position: 45em; --front-z-index: 2; --back-z-index: -2; --rotate-time: 14s; --orbit-time: 8s;"></div>
+                    <div class="astros__callisto" style="--start-left-position: -25em; --end-left-position: 52.5em; --front-z-index: 4; --back-z-index: -4; --rotate-time: 20.5s; --orbit-time: 20s;"></div>
+                </div>
+            </div>
+            <div class="main__sc-media">
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-facebook"></a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

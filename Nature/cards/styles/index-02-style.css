@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3F4F8;
+}
+
+.nature-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    margin: 25px;
+}
+
+.nature-title h1 {
+    text-align: left;
+    font-size: 6vw;
+}
+
+.nature-title p {
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 800px;
+    left: 500px;
+    overflow: hidden;
+    gap: 1.5rem;
+}
+
+#forest, 
+#desert, 
+#savanna,
+#mountain,
+#volcano {
+    display: flex;
+    height: 500px;
+    width: 100px;
+    border-radius: 50px;
+    box-shadow: 1.5px 3px 3px hsl(0deg 0% 0% / 0.45);
+    cursor: pointer;
+    transition: width 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.card-text > * {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    top: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2.5px);
+    opacity: 0;
+    color: #F3F4F8;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow:  0px -3px 1.5px hsl(0deg 0% 0% / 0.45);
+    transition: top 1s ease-out, opacity .2s ease-out;
+}
+
+.card-text p {
+    flex-grow: 1;
+    text-align: justify;
+    text-wrap: wrap;
+    text-align-last: justify;
+}
+
+.container input {
+    display: none;
+}
+
+
+#forest {
+    background-image: url(../../images/forest-0.jpeg);
+}
+
+#desert {
+    background-image: url(../../images/desert-0.jpg);
+}
+
+#savanna {
+    background-image: url(../../images/savanna-0.jpg);
+}
+
+#mountain {
+    background-image: url(../../images/mountain-0.jpg);
+}
+
+#volcano {
+    background-image: url(../../images/volcano-0.jpg);
+}
+
+.card-container {
+    background-position: center;
+    background-size: cover;
+}
+
+#forest:hover, #desert:hover, #savanna:hover, #mountain:hover, #volcano:hover {
+    width: 400px;
+}
+
+.card-container:hover .card-text {
+    opacity: 1;
+    top: 300px;
+}

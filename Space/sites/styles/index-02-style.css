@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #121212;
+}
+
+.planet {
+    position: relative;
+    height: 20em;
+    width: 20em;
+    background: url(../images/earth-map.jpeg) repeat center center;
+    box-shadow: -2em -2em 2em #000 inset, -.5em -.5em 1em #000;
+    animation: rotate 10s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    left: -11em;
+    top: 50%;
+    background: url(../images/moon-map.jpeg) repeat center center;
+    box-shadow: -2em -2em 2.5em #000 inset, -.5em -.5em 1em #000;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, orbit 5s ease-in-out infinite;
+    z-index: 1;
+}
+
+.planet, .moon {
+    border-radius: 50%;
+    background-size: cover;
+}
+
+@keyframes rotate {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes orbit {
+    49% {
+        z-index: 1;
+    }
+    50% {
+        left: 25em;
+        z-index: -1;
+    }
+    99% {
+        z-index: -1;
+    }
+    100% {
+        left: -11em;
+        z-index: 1;
+    }
+}

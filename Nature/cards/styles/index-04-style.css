@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3F4F8
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.cards {
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+    width: 80px;
+    border-radius: 35px;
+    background-color: #fff;
+    box-shadow: 1.3px 2.6px 2.6px hsl(0deg 0% 0% / 0.46);
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+}
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1.5px);
+    border-radius: 0 0 35px 35px;
+    color: #fff;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 22.5px;
+    height: 35px;
+    width: 35px;
+    /* text-align: center; */
+    color: #fff;
+    border-radius: 50%;
+    background-color: #121212;
+    box-shadow: 2.9px 5.8px 5.8px hsl(0deg 0% 0% / 0.41);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    left: 80px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .3s ease-in-out;
+    transition-delay: .3s;
+}
+
+.info h3 {
+    margin: 10px 0px 0px 0px;
+    /* color: #fff; */
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.info p {
+    margin: 10px 0px 10px 0px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cards[for=card-1] {
+    background-image: url(../../images/forest-0.jpeg);
+}
+
+.cards[for=card-2] {
+    background-image: url(../../images/desert-0.jpg);
+}
+
+.cards[for=card-3] {
+    background-image: url(../../images/savanna-0.jpg);
+}
+
+.cards[for=card-4] {
+    background-image: url(../../images/mountain-0.jpg);
+}
+
+.cards[for=card-5] {
+    background-image: url(../../images/volcano-0.jpg);
+}

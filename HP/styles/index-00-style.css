@@ -1,0 +1,117 @@
+@charset "UTF-08";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #FCF5E5;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 1100px;
+    gap: 20px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    transition: all 2s ease;
+    transform-style: preserve-3d;
+}
+
+.wrapper:hover {
+    transform: rotateY(180deg);
+}
+
+.wrapper:nth-child(1) {
+    text-shadow: 1px 2px 2px red;
+}
+
+.wrapper:nth-child(2) {
+    text-shadow: 1px 2px 2px yellow;
+}
+
+.wrapper:nth-child(3) {
+    text-shadow: 1px 2px 2px #CD7F32;
+}
+
+.wrapper:nth-child(4) {
+    text-shadow: 1px 2px 2px #50C878;
+}
+
+.card {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 7px 6px 13px -8px rgba(0, 0, 0, 0.75);
+    backface-visibility: hidden;
+}
+
+span {
+    padding-bottom: 10px;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+#front-card-01 {
+    background: #121212 url(../images/gryffindor_small.png) no-repeat center center;
+    background-size: contain;
+}
+
+#back-card-01 {
+    background: #121212 url(../images/godric_small.png) no-repeat top center;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+#front-card-02 {
+    background: #121212 url(../images/hufflepuff_small.png) no-repeat center center;
+    background-size: contain;
+}
+
+#back-card-02 {
+    background: #121212 url(../images/helga_small.png) no-repeat center center;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+#front-card-03 {
+    background: #121212 url(../images/ravenclaw_small.png) no-repeat center center;
+    background-size: contain;
+}
+
+#back-card-03 {
+    background: #121212 url(../images/rowena_small.png) no-repeat center center;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+#front-card-04 {
+    background: #121212 url(../images/slytherin_small.png) no-repeat 4px center;
+    background-size: contain;
+}
+
+#back-card-04 {
+    background: #121212 url(../images/salazar_small.png) no-repeat 4px center;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
