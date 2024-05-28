@@ -653,7 +653,7 @@ main {
 .main__star-bg-2 {
     display: flex;
     position: absolute;
-    height: 100dvh;
+    height: 93dvh;
     width: 100%;
     z-index: -999;
 }
@@ -747,7 +747,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 100dvh;
+    height: 93dvh;
     width: 100%;
     scroll-behavior: smooth;
 }
