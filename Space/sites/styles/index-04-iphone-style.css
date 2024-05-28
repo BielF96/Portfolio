@@ -708,7 +708,7 @@ main {
 
 .main__star-bg-2 .star:nth-child(30) {
     top: calc(3% + 100px);
-    left: calc(70).5% + 100px);
+    left: calc(70.5% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
