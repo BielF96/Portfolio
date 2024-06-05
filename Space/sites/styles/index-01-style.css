@@ -675,6 +675,7 @@ main {
 }
 
 .main__title h1 span:first-child {
+    left: 2%;
     top: 15%;
 }
 
