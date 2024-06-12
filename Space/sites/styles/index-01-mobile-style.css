@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* Media Query for Iphone 12/13 Pro Max */
+/* Media Query for Iphone 11 to 12/13 Pro Max */
 
 :root {
     --desktop-width: 100vw;
@@ -32,7 +32,7 @@ body {
     background: var(--bg-color);
 }
 
-/* Menu */
+/* ----- Menu ----- */
 
 header {
     display: flex;
@@ -114,9 +114,9 @@ header {
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, .28);
     backdrop-filter: blur(12.4px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
     gap: 8em;
     transform: translateX(-250%);
     transition: transform .3s ease-out;
@@ -142,13 +142,13 @@ header {
     cursor: pointer;
 }
 
-a:active {
+a:active,
+.menu__link {
     border-bottom: .15em solid var(--text-color);
 }
 
 .menu__link {
     font: var(--menu-font-size) var(--menu-font-family);
-    border-bottom: .15em solid var(--text-color);
 }
 
 .dropdown {

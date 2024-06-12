@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Media Query for Iphone 11 to 12/13 Pro Max */
+
 :root {
-    --desktop-height: 100vh;
-    --desktop-width: 100vw;
+    --desktop-height: 100dvh;
+    --desktop-width: 100%;
     --underline-width: 4.3em;
     --background-color: #121212;
     --astros-neutral-color: #ffff;
     --astros-shadow-color: #000;
+    --box-shadow-color: #000;
+    --text-color: #ffff;
     --title-font-size: 9em;
     --astros-font-size: 16px;
-    --menu-font-size: 1.2em;
+    --menu-font-size: 1.4em;
     --astros-font: 'Playfair Display', serif;
     --menu-font-family: 'Tahoma', sans-serif;
     --twinkle-time: 1s;
@@ -31,88 +35,134 @@ header {
     display: flex;
     position: absolute;
     top: 0;
-    height: 9dvh;
+    height: 7dvh;
     width: 100%;
     background: var(--background-color);
-    z-index: 998;
-}
-
-.menu,
-.menu__items,
-.menu__item {
-    display: flex;
-    align-items: center;
+    z-index: 999;
 }
 
 .menu {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    height: 10dvh;
+    height: 100dvh;
     width: 100%;
 }
 
-.menu__logo {
-    padding-inline: 2em;
-    color: var(--astros-neutral-color);
+.menu__checkbox {
+    position: absolute;
+    top: .5em;
+    left: .7em;
+    height: 2.9em;
+    width: 4em;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.menu__lines {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+
+.line {
+    position: absolute;
+    height: .22em;
+    width: 2.5em;
+    border-radius: 1em;
+    background: var(--text-color);
+    transition: transform .4s ease-in-out;
+    z-index: 998;
+}
+
+.line-1 {
+    top: 0;
+    transform-origin: 5% 10%;
+}
+
+.line-2 {
+    top: .7em;
+    transition: transform .1s ease-in-out;
+}
+
+.line-3 {
+    top: 1.4em;
+    transform-origin: 15% 100%;
+}
+
+.menu input[type="checkbox"]:checked ~ .menu__lines .line-1 {
+    transform: rotate(45deg);
+}
+
+.menu input[type="checkbox"]:checked ~ .menu__lines .line-2 {
+    transform: scaleY(0);
+}
+
+.menu input[type="checkbox"]:checked ~ .menu__lines .line-3 {
+    transform: rotate(-45deg);
 }
 
 .menu__items {
-    padding-left: 2.5em;
-    gap: 3.5em;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, .28);
+    backdrop-filter: blur(12.4px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+    gap: 8em;
+    transform: translateX(-250%);
+    transition: transform .3s ease-out;
+}
+
+.menu input[type="checkbox"]:checked ~ .menu__items {
+    transform: translateX(0);
 }
 
 .menu__item {
-    flex-direction: column;
-    list-style: none;
-    cursor: pointer;
-}
-
-.menu__item span {
-    position: relative;
-    left: -1.5em;
-    height: .1em;
-    width: 0em;
-    background: var(--astros-neutral-color);
-}
-
-.menu__item:hover span {
-animation: underlinemove .25s linear forwards;
-}
-
-@keyframes underlinemove {
-    to {
-        width: var(--underline-width); 
-    }
-}
-
-.dropdown {  
-    display: none;
-    position: absolute;
-    padding-top: 2em;
-}
-
-.dropdown li a {
-    padding: .15em;
-    font: calc(var(--menu-font-size) - .1em) var(--menu-font-family);
-    color: var(--astros-neutral-color);
-    text-decoration: none;
-}
-
-.menu__item:nth-child(2):hover .dropdown {
     display: flex;
-    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-shadow: 3px 1px 2px var(--box-shadow-color);
 }
 
-.dropdown li:hover {
-    list-style: disc;
-    color: var(--astros-neutral-color);
+.menu__item a {
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;   
+}
+
+a:active,
+.menu__link {
+    border-bottom: .15em solid var(--text-color);
 }
 
 .menu__link {
-    width: 100px;
     font: var(--menu-font-size) var(--menu-font-family);
-    color: var(--astros-neutral-color);
-    text-decoration: none; 
 }
+
+.dropdown {  
+    display: flex;
+    flex-direction: column;
+    padding-block: 1.2em;
+    padding-left: 4em;
+    list-style: none;
+    font: calc(var(--menu-font-size) - .2em) var(--menu-font-family);
+    gap: 2em;
+ }
+
+.menu__logo {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: var(--text-color);
+}
+
+/* ----- Body ----- */
 
 .container,
 .main__star-bg,
@@ -125,16 +175,10 @@ animation: underlinemove .25s linear forwards;
 }
 
 .container {
-    align-items: space;
+    align-items: center ;
     justify-content: center;
-    bottom: 0%;
     background: var(--background-color);
-    z-index: 997;
-}
-
-.menu__checkbox,
-.menu__lines {
-    display: none;
+    overflow: hidden;
 }
 
 /* ----- Star Background ----- */
@@ -180,7 +224,7 @@ animation: underlinemove .25s linear forwards;
 }
 
 .star:nth-child(6) {
-    top: calc(75% + 100px);
+    top: calc(85% + 100px);
     left: calc(5% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
@@ -205,13 +249,13 @@ animation: underlinemove .25s linear forwards;
 
 .star:nth-child(10) {
     top: calc(5% + 100px);
-    left: calc(2.5% + 100px);
+    left: calc(.5% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
 .star:nth-child(11) {
     top: calc(70% + 100px);
-    left: calc(2% + 100px);
+    left: calc(-2% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
 
@@ -277,7 +321,7 @@ animation: underlinemove .25s linear forwards;
 
 .star:nth-child(22) {
     top: calc(28% + 100px);
-    left: calc(90% + 100px);
+    left: calc(70% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
@@ -289,19 +333,19 @@ animation: underlinemove .25s linear forwards;
 
 .star:nth-child(24) {
     top: calc(65% + 100px);
-    left: calc(74.5% + 100px);
+    left: calc(70.5% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
 .star:nth-child(25) {
     top: calc(60.5% + 100px);
-    left: calc(80% + 100px);
+    left: calc(60% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
 
 .star:nth-child(26) {
     top: calc(75% + 100px);
-    left: calc(79% + 100px);
+    left: calc(60% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
@@ -313,49 +357,49 @@ animation: underlinemove .25s linear forwards;
 
 .star:nth-child(28) {
     top: calc(5% + 100px);
-    left: calc(75% + 100px);
+    left: calc(54% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
 .star:nth-child(29) {
-    top: calc(25% + 100px);
-    left: calc(83% + 100px);
+    top: calc(45% + 100px);
+    left: calc(63% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
 
 .star:nth-child(30) {
-    top: calc(5% + 100px);
-    left: calc(81.5% + 100px);
+    top: calc(-3% + 100px);
+    left: calc(31.5% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
 .star:nth-child(31) {
     top: calc(70% + 100px);
-    left: calc(85% + 100px);
+    left: calc(65% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
 
 .star:nth-child(32) {
-    top: calc(45% + 100px);
-    left: calc(77.2% + 100px);
+    top: calc(55% + 100px);
+    left: calc(-10.2% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
 .star:nth-child(33) {
     top: calc(50% + 100px);
-    left: calc(89% + 100px);
+    left: calc(39% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
 
 .star:nth-child(34) {
-    top: calc(15% + 100px);
-    left: calc(78% + 100px);
+    top: calc(20% + 100px);
+    left: calc(58% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
 .star:nth-child(35) {
     top: calc(50.5% + 100px);
-    left: calc(68% + 100px);
+    left: calc(65% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
 
@@ -378,14 +422,14 @@ animation: underlinemove .25s linear forwards;
 }
 
 .star:nth-child(39) {
-    top: calc(-7% + 100px);
-    left: calc(90% + 100px);
+    top: calc(-4% + 100px);
+    left: calc(-7% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
 
 .star:nth-child(40) {
-    top: calc(-8% + 100px);
-    left: calc(74.5% + 100px);
+    top: calc(30% + 100px);
+    left: calc(30.5% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
@@ -420,7 +464,7 @@ animation: underlinemove .25s linear forwards;
 }
 
 .star:nth-child(46) {
-    top: calc(5% + 100px);
+    top: calc(10% + 100px);
     left: calc(45.5% + 100px);
     animation-duration: calc(var(--twinkle-time) + 0.5s);
 }
@@ -472,26 +516,30 @@ animation: underlinemove .25s linear forwards;
     }
 }
 
-/* ----- Content Title ----- */
+/* ----- Title ----- */
 
 .font-9em {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font: bold var(--title-font-size) var(--astros-font);
+    justify-content: space-around;
+    font: bold calc(var(--title-font-size) - 3.5em) var(--astros-font);
     color: var(--astros-neutral-color);
     text-shadow: 2px 2px 2px black, -2px -5px 0 black;
 }
 
 .title-1 {
-    padding-right: 1.8em;
+    padding-bottom: 2.5em;
 }
 
-/* ----- Orbit ------ */
+.title-2 {
+    padding-top: 1em;
+}
+
+/* ----- Orbit ----- */
 
 .jupiter-orbit {
     align-items: center;
     justify-content: center;
-    left: 3%;
 }
 
 .jupiter-orbit div {
@@ -513,50 +561,50 @@ animation: underlinemove .25s linear forwards;
 }
 
 .jupiter {
-    height: 200px;
-    width: 200px;
+    height: 80px;
+    width: 80px;
     background: url(../images/jupiter-south-pole.png) center center;
     box-shadow: -10px -10px 20px 2px var(--astros-shadow-color) inset, 0 0 20px 2px var(--astros-shadow-color);
 }
+
 .w-shadow {
    filter: drop-shadow(-1px -3px 1px var(--astros-shadow-color));
 }
 
 .border-4px {
+    display: flex;
+    justify-content: center;
     outline: 2px solid var(--astros-neutral-color);
     border: solid var(--astros-shadow-color) 4px;
 }
 
 .outline-1,
 .io-orbit {
-    height: 300px;
-    width: 300px;
+    height: 100px;
+    width: 100px;
 }
 
 .outline-2,
 .europa-orbit {
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
 }
 
 .outline-3,
 .ganymede-orbit {
-    height: 500px;
-    width: 500px;
-    z-index: 998;
+    height: 300px;
+    width: 300px;
 }
 
 .outline-4,
 .callisto-orbit {
-    height: 600px;
-    width: 600px;
-    z-index: 998;
+    height: 400px;
+    width: 400px;
 }
 
 .font-16px {
-    position: absolute;
     height: 20px;
-    font: bold var(--astros-font-size) var(--astros-font);
+    font: bold calc(var(--astros-font-size) - .1em) var(--astros-font);
     text-align: center;
     text-decoration: none;
     color: var(--background-color);
@@ -564,7 +612,6 @@ animation: underlinemove .25s linear forwards;
     background: var(--astros-neutral-color);
     border-radius: 20%;
     cursor: pointer;
-    z-index: 999;
 }
 
 .font-16px:hover {
@@ -584,8 +631,8 @@ animation: underlinemove .25s linear forwards;
 }
 
 .container-1 {
-    height: 310px;
-    width: 310px;
+    height: 110px;
+    width: 110px;
 }
 
 .text-2 {
@@ -593,8 +640,8 @@ animation: underlinemove .25s linear forwards;
 }
 
 .container-2 {
-    height: 410px;
-    width: 410px;
+    height: 210px;
+    width: 210px;
 }
 
 .text-3 {
@@ -602,8 +649,8 @@ animation: underlinemove .25s linear forwards;
 }
 
 .container-3 {
-    height: 510px;
-    width: 510px;
+    height: 310px;
+    width: 310px;
 }
 
 .text-4 {
@@ -611,37 +658,38 @@ animation: underlinemove .25s linear forwards;
 }
 
 .container-4 {
-    height: 610px;
-    width: 610px;
+    height: 410px;
+    width: 410px;
 }
 
 .io {
     left: 20%;
-    height: 40px;
-    width: 40px;
+    height: 10px;
+    width: 10px;
     background: url(../images/io-south-pole.png) center center;
 }
 
 .europa {
-    left: 25%;
-    height: 35px;
-    width: 35px;
+    left: 18%;
+    height: 25px;
+    width: 25px;
     background: url(../images/europa-south-pole.png) center center;
 }
 
 .ganymede {
     left: 20%;
-    height: 60px;
-    width: 60px;
+    height: 35px;
+    width: 35px;
     background: url(../images/ganymede-south-pole.png) center center;
 }
 
 .callisto {
-    left: 23.5%;
-    height: 56px;
-    width: 58px;
+    left: 25.5%;
+    height: 32px;
+    width: 32px;
     background: url(../images/callisto-south-pole.png) center center;
 }
+
 
 @keyframes rotate {
     from {

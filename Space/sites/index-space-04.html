@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index-04-style.css">
+    <link rel="stylesheet" href="styles/index-04-style.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="styles/index-04-mobile-style.css" media="screen and (max-width: 428px)">
     <title>Space 04</title>
 </head>
 <body>
     <div class="container">
         <header>
             <nav class="menu">
+                <input type="checkbox" id="menu__checkbox" class="menu__checkbox">
+                <div class="menu__lines">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </div>
                 <ul class="menu__items">
                     <li class="menu__item">
                         <a href="index-space-01.html" class="menu__link">Home</a>
@@ -86,27 +93,49 @@
             <span class="star"></span>
             <span class="shooting-star"></span>
         </div>
-        <p class="title-1 font-9em">Jupiter's</p>
-        <p class="title-2 font-9em">Moons</p>
+        <div class="font-9em">
+            <p class="title-1">Jupiter's</p>
+            <p class="title-2">Moons</p>
+        </div>
         <div class="jupiter-orbit">
             <div class="jupiter w-shadow" style="--rotate-time: 3.5s;"></div>
-            <div class="outline-1 border-4px"></div>
-            <a href="index-space-01.html#io" target="_blank" class="text-1 font-16px">Io</a>
+            <div class="outline-1 border-4px">
+                <div class="text__container container-1">
+                    <a href="index-space-01.html#io" target="_blank" class="text-1 font-16px">
+                        Io
+                    </a>
+                </div>
+            </div>
             <div class="io-orbit" style="--rotate-time: 5.78s;">
                 <div class="io w-shadow" style="--rotate-time: 2s;"></div>
             </div>
-            <div class="outline-2 border-4px"></div>
-            <a href="index-space-01.html#europa" target="_blank" class="text-2 font-16px">Europa</a>
+            <div class="outline-2 border-4px">
+                <div class="text__container container-2">
+                    <a href="index-space-01.html#europa" target="_blank" class="text-2 font-16px">
+                        Europa
+                    </a>
+                </div>
+            </div>
             <div class="europa-orbit" style="--rotate-time: 10.65s;">
                 <div class="europa w-shadow" style="--rotate-time: 4s;"></div>
             </div>
-            <div class="outline-3 border-4px"></div>
-            <a href="index-space-01.html#ganymede" target="_blank" class="text-3 font-16px">Ganymede</a>
+            <div class="outline-3 border-4px">
+                <div class="text__container container-3">
+                    <a href="index-space-01.html#ganymede" target="_blank" class="text-3 font-16px">
+                        Ganymede
+                    </a>
+                </div>
+            </div>
             <div class="ganymede-orbit" style="--rotate-time: 21.45s;">
                 <div class="ganymede w-shadow" style="--rotate-time: 6s;"></div>
             </div>
-            <div class="outline-4 border-4px"></div>
-            <a href="index-space-01.html#callisto" target="_blank" class="text-4 font-16px">Callisto</a>
+            <div class="outline-4 border-4px">
+                <div class="text__container container-4">
+                    <a href="index-space-01.html#callisto" target="_blank" class="text-4 font-16px">
+                        Callisto
+                    </a>
+                </div>
+            </div>
             <div class="callisto-orbit" style="--rotate-time: 50s;">
                 <div class="callisto w-shadow" style="--rotate-time: 8s;"></div>
             </div>

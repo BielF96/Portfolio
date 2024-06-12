@@ -30,7 +30,7 @@ body {
     background: var(--bg-color);
 }
 
-/* Menu */
+/*----- Menu -----*/
 
 header {
     display: flex;
