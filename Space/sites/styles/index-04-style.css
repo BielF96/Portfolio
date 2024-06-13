@@ -543,7 +543,7 @@ animation: underlinemove .25s linear forwards;
 .ganymede-orbit {
     height: 500px;
     width: 500px;
-    z-index: 998;
+    z-index: 998    ;
 }
 
 .outline-4,
