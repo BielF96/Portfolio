@@ -110,7 +110,7 @@ header {
     flex-direction: column;
     justify-content: center;
     background: rgba(255, 255, 255, .28);
-    backdrop-filter: blur(12.4px);
+    backdrop-filter: blur(20.4px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
     gap: 8em;
     transform: translateX(-250%);
