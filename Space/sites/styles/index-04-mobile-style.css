@@ -563,7 +563,7 @@ a:active,
 .jupiter {
     height: 80px;
     width: 80px;
-    background: url(../images/jupiter-south-pole.png) center center;
+    background: url(../images/jupiter-south-pole-300.png) center center;
     box-shadow: -10px -10px 20px 2px var(--astros-shadow-color) inset, 0 0 20px 2px var(--astros-shadow-color);
 }
 
