@@ -79,6 +79,19 @@ header {
     border-bottom: 1px solid #fff;
 }
 
+.menu__icons {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 2em;
+    width: 2em;
+}
+
+.fa-circle-info {
+    height: 2em;
+    width: 2em;
+}
+
 main {
     display: flex;
     height: 90dvh;

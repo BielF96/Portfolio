@@ -619,28 +619,28 @@ animation: underlinemove .25s linear forwards;
     left: 20%;
     height: 40px;
     width: 40px;
-    background: url(../images/io-south-pole.png) center center;
+    background: url(../images/io-south-pole-300.png) center center;
 }
 
 .europa {
     left: 25%;
     height: 35px;
     width: 35px;
-    background: url(../images/europa-south-pole.png) center center;
+    background: url(../images/europa-south-pole-300.png) center center;
 }
 
 .ganymede {
     left: 20%;
     height: 60px;
     width: 60px;
-    background: url(../images/ganymede-south-pole.png) center center;
+    background: url(../images/ganymede-south-pole-300.png) center center;
 }
 
 .callisto {
     left: 23.5%;
     height: 56px;
     width: 58px;
-    background: url(../images/callisto-south-pole.png) center center;
+    background: url(../images/callisto-south-pole-300.png) center center;
 }
 
 @keyframes rotate {

@@ -857,25 +857,25 @@ main {
 .astros__io {
     height: 5em;
     width: 5em;
-    background: url(../images/io-map.jpeg) repeat center center;
+    background: url(../images/io-map-600.jpg) repeat center center;
 }
 
 .astros__ganymede {
     height: 10em;
     width: 10em;
-    background: url(../images/ganymede-map.jpeg) repeat center center;
+    background: url(../images/ganymede-map-600.jpg) repeat center center;
 }
 
 .astros__europa {
     height: 4em;    
     width: 4em;
-    background: url(../images/europa-map.jpg) repeat center center;
+    background: url(../images/europa-map-600.jpg) repeat center center;
 }
 
 .astros__callisto {
     height: 8em;
     width: 8em;
-    background: url(../images/callisto-map.jpeg) repeat-x center center;
+    background: url(../images/callisto-map-600.jpg) repeat-x center center;
 }
 
 @keyframes rotate {
@@ -978,13 +978,13 @@ main {
 .io__model {
     height: 15em;
     width: 15em;
-    background: url(../images/io-map.jpeg) repeat center center;
+    background: url(../images/io-map-600.jpg) repeat center center;
 }
 
 .ganymede__model {
     height: 40%;
     width: 80%;
-    background: url(../images/ganymede-map.jpeg) repeat center center; 
+    background: url(../images/ganymede-map-600.jpg) repeat center center; 
 }
 
 .europa__model,
@@ -994,11 +994,11 @@ main {
 }
 
 .europa__model {
-    background: url(../images/europa-map.jpg) repeat center center;
+    background: url(../images/europa-map-600.jpg) repeat center center;
 }
 
 .callisto__model {
-    background: url(../images/callisto-map.jpeg) repeat center center;
+    background: url(../images/callisto-map-600.jpg) repeat center center;
 }
 
 /* ----- Moons contents ----- */
