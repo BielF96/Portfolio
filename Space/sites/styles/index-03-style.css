@@ -33,35 +33,26 @@
 
 header {
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 10dvh;
     background-color: var(--bg-color);
 }
 
-.header__logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-left: 64px;
-}
-
-.header__logo img {
-    height: 66px;
-    width: 66px;
-}
 
 .menu {
+    display: flex;
     position: relative;
     width: 100%;
-    min-width: 375px;
-    margin-inline: 32px;
+    margin-inline: 4em;
 }
 
 .menu__items {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-start;
     height: 100%;
-    gap: 100px;
+    gap: 6em;
 }
 
 .menu__item {
@@ -77,6 +68,16 @@ header {
 
 .menu__link:hover {
     border-bottom: 1px solid #fff;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__icons {
+    display: none;
 }
 
 main {
@@ -211,11 +212,11 @@ main {
 
 .main__content {
     display: flex;
+    position: absolute;
     flex-flow: column wrap;
     align-items: flex-start;
-    position: absolute;
     height: calc(100% - 80px);
-    min-width: 300px;
+    width: 40em;
     margin-left: 64px;
 }
 
