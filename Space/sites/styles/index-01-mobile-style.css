@@ -919,12 +919,7 @@ main {
     text-decoration: none;
     color: black;
     cursor: pointer;
-    transition: scale 1.4s ease-in-out;
-}
-
-.fa:hover {
-    transform: scale(1.2);
-    transition: all .3s ease;
+    z-index: 999;
 }
 
 /* ----- Line break section ----- */
@@ -1037,4 +1032,215 @@ main {
     .io__content, .ganymede__content, .europa__content, .callisto__content {
         width: 20em;
     }
+}
+
+@media (orientation: landscape) {
+    /* ----- Menu ----- */
+    .menu__items {
+        flex-direction: row;
+    }
+
+    /* ----- Title ----- */
+
+    .main__title {
+        display: flex;
+        align-items: center;
+    }
+
+    .main__title h1 span:first-child {
+        top: 10%;
+        left: 2%;
+    }
+    
+    .main__title h1 span:last-child {
+        top: 75%;
+        left: 71%;
+    }
+
+    .astros__jupiter {
+        position: absolute;
+        height: 20em;
+        width: 20em;
+    }
+
+    /* ----- Media buttons/links ----- */
+
+    .main__sc-media {
+        top: 85%;
+    }
+
+    /* ----- Moons contents ----- */
+    .io__content, 
+    .ganymede__content,
+    .europa__content,
+    .callisto__content {
+    padding: 1em;
+    scale: 0.9;
+    }
+
+    /* ----- Moons 3D models ----- */
+
+    .io__model {
+        height: 15em;
+        width: 15em;
+    }
+    
+    .ganymede__model {
+        height: 19em;
+        width:  19em;
+    }
+
+    .europa__model {
+        height: 16.5em;
+        width: 16.5em;
+    }
+
+    .callisto__model {
+        height: 16.5em;
+        width: 16.5em;
+    }
+
+    /* ----- Moons positions ----- */
+    .io, 
+    .ganymede,
+    .europa,
+    .callisto {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    /* ----- Background Star 03 */
+
+    .star:nth-child(1) {
+        top: calc(40% + var(--star-position));
+        left: calc(-5% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .star:nth-child(3) {
+        top: calc(1% + var(--star-position));
+        left: calc(35% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(4) {
+        top: calc(3% + 100px);
+        left: calc(30% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .star:nth-child(6) {
+        top: calc(75% + var(--star-position));
+        left: calc(30% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .main__star-bg-3 .star:nth-child(8) {
+        top: calc(8% + 100px);
+        left: calc(40% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .main__star-bg-3 .star:nth-child(9) {
+        top: calc(20% + var(--star-position));
+        left: calc(-8% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(10) {
+        top: calc(2% + 100px);
+        left: calc(2.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .main__star-bg-3 .star:nth-child(11) {
+        top: calc(12% + var(--star-position));
+        left: calc(2% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(13) {
+        top: calc(70% + var(--star-position));
+        left: calc(-6% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(14) {
+        top: calc(15% + var(--star-position));
+        left: calc(-5% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .star:nth-child(15) {
+        top: calc(79.5% + var(--star-position));
+        left: calc(-2% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(21) {
+        top: calc(1% + 0px);
+        left: calc(57% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(22) {
+        top: calc(28% + 100px);
+        left: calc(5% + .5px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .main__star-bg-3 .star:nth-child(27) {
+        top: calc(15% + 100px);
+        left: calc(85% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(30) {
+        top: calc(3% + 100px);
+        left: calc(37.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .main__star-bg-3 .star:nth-child(32) {
+        top: calc(68% + 100px);
+        left: calc(45.2% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .star:nth-child(33) {
+        top: calc(50% + var(--star-position));
+        left: calc(89% + var(--star-position));
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(34) {
+        top: calc(68% + 100px);
+        left: calc(20% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .main__star-bg-3 .star:nth-child(35) {
+        top: calc(60.5% + 100px);
+        left: calc(52% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(36) {
+        top: calc(64% + 100px);
+        left: calc(5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
+    .main__star-bg-3 .star:nth-child(39) {
+        top: calc(-6% + 100px);
+        left: calc(82% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+
+    .main__star-bg-3 .star:nth-child(40) {
+        top: calc(-5% + 100px);
+        left: calc(45.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+
 }
