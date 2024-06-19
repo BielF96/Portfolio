@@ -35,7 +35,7 @@ header {
     display: flex;
     position: absolute;
     top: 0;
-    height: 7dvh;
+    height: 0;
     width: 100%;
     background: var(--background-color);
     z-index: 999;
@@ -697,5 +697,310 @@ a:active,
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media (orientation: landscape) {
+
+    /* ----- Menu ----- */
+    .menu__items {
+        flex-direction: row;
+    }
+
+    /* ----- Title ----- */
+
+    .font-9em {
+        flex-direction: row;
+    }
+
+    /* ----- Models Container ------ */
+
+    .jupiter-orbit {
+        scale: .85;
+    }
+
+    /* ----- Orbit Outline ----- */
+
+    .outline-4,
+    .callisto-orbit {
+        z-index: 999;
+    }
+
+    /* ------ Background Star ----- */
+
+    .star:nth-child(1) {
+        top: calc(40% + 100px);
+        left: calc(37% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(2) {
+        top: calc(28% + 100px);
+        left: calc(15% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(3) {
+        top: calc(70% + 100px);
+        left: calc(30% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(4) {
+        top: calc(65% + 100px);
+        left: calc(20% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(5) {
+        top: calc(63.5% + 100px);
+        left: calc(10% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(6) {
+        top: calc(65% + 100px);
+        left: calc(85% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(7) {
+        top: calc(15% + 100px);
+        left: calc(5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(8) {
+        top: calc(5% + 100px);
+        left: calc(15% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(9) {
+        top: calc(25% + 100px);
+        left: calc(7% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(10) {
+        top: calc(5% + 100px);
+        left: calc(.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(11) {
+        top: calc(70% + 100px);
+        left: calc(-2% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(12) {
+        top: calc(45% + 100px);
+        left: calc(11% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(13) {
+        top: calc(70% + 100px);
+        left: calc(14% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(14) {
+        top: calc(15% + 100px);
+        left: calc(-4% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(15) {
+        top: calc(50.5% + 100px);
+        left: calc(-2% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(16) {
+        top: calc(55% + 100px);
+        left: calc(5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(17) {
+        top: calc(29% + 100px);
+        left: calc(-1% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(18) {
+        top: calc(-5% + 100px);
+        left: calc(7% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(19) {
+        top: calc(55% + 100px);
+        left: calc(15% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(20) {
+        top: calc(1% + 100px);
+        left: calc(81% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(21) {
+        top: calc(25% + 100px);
+        left: calc(54% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(22) {
+        top: calc(28% + 100px);
+        left: calc(70% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(23) {
+        top: calc(25% + 100px);
+        left: calc(85% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(24) {
+        top: calc(65% + 100px);
+        left: calc(70.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(25) {
+        top: calc(60.5% + 100px);
+        left: calc(60% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(26) {
+        top: calc(-15% + 100px);
+        left: calc(70% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(27) {
+        top: calc(15% + 100px);
+        left: calc(62% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(28) {
+        top: calc(5% + 100px);
+        left: calc(54% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(29) {
+        top: calc(45% + 100px);
+        left: calc(63% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(30) {
+        top: calc(-12% + 100px);
+        left: calc(31.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(31) {
+        top: calc(70% + 100px);
+        left: calc(65% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(32) {
+        top: calc(55% + 100px);
+        left: calc(-10.2% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(33) {
+        top: calc(50% + 100px);
+        left: calc(39% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(34) {
+        top: calc(20% + 100px);
+        left: calc(24% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(35) {
+        top: calc(50.5% + 100px);
+        left: calc(65% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(36) {
+        top: calc(55% + 100px);
+        left: calc(5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(37) {
+        top: calc(-5% + 100px);
+        left: calc(60% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(38) {
+        top: calc(2% + 100px);
+        left: calc(70% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(39) {
+        top: calc(-4% + 100px);
+        left: calc(-7% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(40) {
+        top: calc(30% + 100px);
+        left: calc(30.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(41) {
+        top: calc(-8% + 100px);
+        left: calc(45.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(42) {
+        top: calc(8% + 100px);
+        left: calc(35.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(43) {
+        top: calc(57% + 100px);
+        left: calc(78.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(44) {
+        top: calc(65% + 100px);
+        left: calc(55.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.2s);
+    }
+    
+    .star:nth-child(45) {
+        top: calc(15% + 100px);
+        left: calc(55.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
+    }
+    
+    .star:nth-child(46) {
+        top: calc(10% + 100px);
+        left: calc(45.5% + 100px);
+        animation-duration: calc(var(--twinkle-time) + 0.5s);
     }
 }
