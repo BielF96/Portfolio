@@ -918,7 +918,7 @@ a:active,
     animation-duration: calc(var(--twinkle-time) + 0.2s);
 }
 
- /* ----- Background Star 04 */
+/* ----- Background Star 04 */
     
  .main__star-bg-4 .star:nth-child(1) {
     top: calc(40% + var(--star-position));
@@ -1738,8 +1738,8 @@ main {
 
     .astros__jupiter {
         position: absolute;
-        height: 20em;
-        width: 20em;
+        height: 21em;
+        width: 21em;
     }
 
     /* ----- Media buttons/links ----- */
