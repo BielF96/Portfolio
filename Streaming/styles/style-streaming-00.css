@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* ----- Pre-sets ----- */
+:root {
+    --background-color: #000;
+    --primary-color: #e50914;
+    --light-dark-color: #141414;
+    --icon-gray-color: #787878;
+    --text-white-color: #fff;
+    --text-light-grey-color: #f4f4f4;
+    --title-font: 'Roboto', sans-serif;
+    --text-font: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ##### Utilities ###### */
+
+/* ----- Buttons ----- */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.1rem var(--text-font);
+    color: var(--text-white-color);
+    background: var(--primary-color);
+    border-radius: .4rem;
+}
+
+.btn:hover {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    opacity: .93;
+}
+
+.btn--sml {
+    padding-block: 1rem;
+    height: 2rem;
+    width: 6rem;
+}
+
+.btn--md {
+    padding: 1rem;
+    height: 2.5rem;
+    width: 15.5rem;
+}
+
+.btn--xl {
+    height: 6rem;
+    width: 35rem;
+}
+
+.btn__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+/* ----- Body ----- */
+body {
+    background: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ----- Header ----- */
+header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 10dvh;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+header img {
+    height: 3.5rem;
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header__btn {
+    position: absolute;
+    right: 5%;
+}
+
+/* ----- Presentation ----- */
+.prstn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80dvh;
+    width: 100%;
+}
+
+.prstn__background {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+    box-shadow: inset 150px 150px 250px rgba(0, 0, 0, 1), inset -150px -150px 250px rgba(0, 0, 0, 1);
+    z-index: -1;
+}
+
+.prstn__background::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.prstn__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.prstn__title {
+    font: 5.5rem var(--title-font);
+    color: var(--text-white-color);
+}
+
+.prstn__text {
+    font: 2rem var(--text-font);
+    text-transform: uppercase;
+    color: var(--text-white-color);
+}
+
+.prstn__btn {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* ###### Streaming Informations #####*/
+
+/* Icons informations */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--light-dark-color);
+}
+
+.info__icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 70%;
+    color: var(--icon-gray-color);
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem ;
+    gap: 1rem;
+    cursor: pointer;    
+}
+
+.icon:hover {
+    color: var(--text-white-color);
+}
+
+.icon--red-border {
+    border-bottom: .4rem var(--primary-color) solid;
+}
+
+.icon > i {
+    font-size: 3.8rem;
+}
+
+.icon__text {
+    font: 1.5rem var(--text-font);
+}
+
+/* ----- Tabs contents ----- */
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs__content {
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    width: 70%;
+}
+
+.tab-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tabs__text {
+    padding: 0 1.3rem 1.3rem 0;
+    font: 1.8rem var(--text-font);
+    text-align: left;
+    color: var(--text-white-color);
+}
+
+.tabs__btn {
+    font: 1rem var(--text-font);
+    text-transform: uppercase;
+}
+
+.tabs__img {
+    height: 18rem;
+}
+
+
+
+
+
+
+@media (max-width: 428px) {
+
+    /* ----- Header ----- */
+    header {
+        justify-content: space-between;
+    }
+
+    header img {
+        height: 2rem;
+    }
+
+    /*----- Presentation ----- */
+    .prstn__title {
+        font-size: 3rem;
+    }
+
+    .prstn__text {
+        font-size: 1rem;
+    }
+
+    .prstn__btn {
+        font-size: 1rem;
+
+    }
+
+    .btn__icon {
+        height: 1rem;
+    }
+
+    .btn--xl {
+        height: 3rem;
+        width: 18rem;
+    }
+
+    /* ----- Icons informations ----- */
+    .icon > i {
+        font-size: 3rem;
+    }
+
+    .icon__text {
+        display: none;
+    }
+
+    /* ----- Tabs Content ----- */
+    .tabs__content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .tabs__text {
+        font-size: 1.2rem;
+    }
+
+    .tabs__img {
+        height: 12rem;
+    }
+}
+
+
