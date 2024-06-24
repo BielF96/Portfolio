@@ -46,12 +46,12 @@
 .btn--md {
     padding: 1rem;
     height: 2.5rem;
-    width: 15.5rem;
+    width: 17rem;
 }
 
 .btn--xl {
-    height: 6rem;
-    width: 35rem;
+    height: 5rem;
+    width: 34rem;
 }
 
 .btn__icon {
@@ -149,6 +149,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: .2rem var(--icon-gray-color) solid;
     width: 100%;
     background: var(--light-dark-color);
 }
@@ -179,11 +180,11 @@ a {
 }
 
 .icon > i {
-    font-size: 3.8rem;
+    font-size: 3rem;
 }
 
 .icon__text {
-    font: 1.5rem var(--text-font);
+    font: 1.1rem var(--text-font);
 }
 
 /* ----- Tabs contents ----- */
@@ -217,15 +218,68 @@ a {
     text-transform: uppercase;
 }
 
-.tabs__img {
+.tab-1__img {
     height: 18rem;
+}
+
+.tab-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tab-2__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tab-2__info .tabs__text {
+    width: 60%;
+}
+
+.tab-2__img__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+.img__container-1,
+.img__container-2,
+.img__container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tab-2__img {
+    height: 11.5rem;
+}
+
+.img__text {
+    font-family: var(--text-font);
+    text-align: center;
+}
+
+.text--white {
+    font-size: 1.1rem;
+    color: var(--text-white-color);
+}
+
+.text--grey {
+    padding-top: .5rem;
+    width: 15rem;
+    font-size: 1rem;
+    color: var(--icon-gray-color);
 }
 
 
 
+/* ##### Media queries and Media types #####*/
 
-
-
+/* ----- Media query for mobile (portrait) */
 @media (max-width: 428px) {
 
     /* ----- Header ----- */
@@ -271,18 +325,96 @@ a {
 
     /* ----- Tabs Content ----- */
     .tabs__content {
-        display: flex;
-        flex-direction: column;
         gap: 3rem;
     }
 
     .tabs__text {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
+        text-align: center;
     }
 
     .tabs__img {
         height: 12rem;
     }
+
+    .tab-2__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tab-2__info .tabs__text {
+        padding: 0 0 1.3rem 0;
+        width: 100%;
+    }
+
+    .tab-2__img__container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+
+
+}
+
+/* ----- Media query for mobile (landscape) -----*/
+
+@media (max-width: 926px) and (orientation: landscape) {
+
+    /* -----Header ----- */
+    header {
+        padding: 2rem;
+    }
+
+    /* ----- Presentation section ----- */
+    .prstn {
+        height: 73dvh;
+    }
+
+    .prstn__title {
+        font-size: 4rem;
+    }
+
+    .prstn__text {
+        font-size: 1.5rem;
+    }
+
+    .prstn__btn {
+        font-size: 1.5rem;
+    }
+
+    .prstn__background {
+        height: 100%;
+    }
+
+    .btn__icon {
+        height: 1.5rem;
+    }
+
+    .btn--xl {
+        height: 3rem;
+        width: 25rem;
+    }
+
+    /*----- Icons informations ----- */
+    .icon__text {
+        display: none;
+    }
+
+    /* ----- Tabs content ----- */
+    .tabs__text {
+        font-size: 1.5rem;
+    }
+
+    .tab-1__img {
+        height: 12rem;
+    }
+
+    .tab-2__img {
+        height: 8rem;
+    }
+
 }
 
 
