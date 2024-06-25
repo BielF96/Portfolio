@@ -201,11 +201,6 @@ a {
     width: 70%;
 }
 
-.tab-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .tabs__text {
     padding: 0 1.3rem 1.3rem 0;
     font: 1.8rem var(--text-font);
@@ -216,6 +211,11 @@ a {
 .tabs__btn {
     font: 1rem var(--text-font);
     text-transform: uppercase;
+}
+
+.tab-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .tab-1__img {
@@ -275,7 +275,99 @@ a {
     color: var(--icon-gray-color);
 }
 
+.tab-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem
+}
 
+.tab-3__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    font: 1.1rem var(--text-font);
+}
+
+thead {
+    text-transform: uppercase;
+    color: var(--text-white-color);
+}
+
+th {
+    padding: 1rem;
+}
+
+tbody {
+    color: var(--icon-gray-color);
+}
+
+tbody tr:nth-child(odd) {
+    background: var(--light-dark-color);
+}
+
+td {
+    padding: .8rem 0 .8rem .8rem;
+}
+
+td:nth-child(1) {
+    padding-right: 10rem;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4) {
+    text-align: center;
+}
+
+td i {
+    font-size: .9rem;
+}
+
+.tab-3__mobile {
+    display: none;
+}
+
+/* ##### Footer ##### */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    padding-bottom: 1.5rem;
+    font: .9rem var(--text-font);
+    gap: 2rem;
+}
+
+footer p, 
+footer a {
+    color: var(--icon-gray-color);
+}
+
+.call-number {
+    padding-bottom: 2rem;
+}
+
+.number {
+    text-decoration: underline;
+}
+
+.footer__links ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 7rem;
+}
+
+.footer__links li {
+    padding-block: .3rem;
+}
 
 /* ##### Media queries and Media types #####*/
 
@@ -328,12 +420,17 @@ a {
         gap: 3rem;
     }
 
+    .tab-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
     .tabs__text {
         font-size: 1.25rem;
         text-align: center;
     }
 
-    .tabs__img {
+    .tab-1__img {
         height: 12rem;
     }
 
@@ -354,8 +451,86 @@ a {
         gap: 3rem;
     }
 
+    .tab-3__info,
+    .tab-3__charts {
+        display: none;
+    }
 
+    .tab-3__mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        width: 90%;
+    }
 
+    .tab-3__info {
+        font: 1.3rem var(--text-font);
+        text-align: center;
+    }
+
+    .tab-3__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        border: .2rem var(--primary-color) solid;
+        border-radius: 1rem;
+        color: var(--icon-gray-color);
+    }
+
+    .plans {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        font: 1.3rem var(--title-font);
+        color: var(--text-light-grey-color);
+    }
+
+    .plans > div {
+        padding: .4rem;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    .bg--red {
+        background: var(--primary-color);
+    }
+
+    .tab-3__content p {
+        font: 1.1rem var(--text-font);
+    }
+
+    .basic-plan,
+    .standard-plan,
+    .premium-plan {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 1.5rem;
+        gap: 1rem;
+    }
+
+    .price {
+        padding-block: .5rem;
+        border-bottom: .15rem var(--text-light-grey-color) solid;
+        font: 1.3rem var(--text-font);
+        text-align: center;
+        color: var(--text-light-grey-color);
+    }
+
+    .tab-3__btn {
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    /* ----- Footer -----*/
+    .footer__links ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 4rem;
+    }
+    
 }
 
 /* ----- Media query for mobile (landscape) -----*/
@@ -404,15 +579,26 @@ a {
 
     /* ----- Tabs content ----- */
     .tabs__text {
+        padding: 0 0 1.3rem 0;
         font-size: 1.5rem;
     }
 
     .tab-1__img {
+        padding-left: 1.5rem;
         height: 12rem;
     }
 
     .tab-2__img {
         height: 8rem;
+    }
+
+    .tab-3 {
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer__links ul {
+        grid-column-gap: 4rem;
     }
 
 }
