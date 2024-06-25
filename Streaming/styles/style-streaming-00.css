@@ -467,16 +467,21 @@ footer a {
     .tab-3__charts {
         display: none;
     }
-
+    
     .tab-3__mobile {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 2rem;
         width: 90%;
     }
-
-    .tab-3__info {
+    
+    .tab-3__info-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         font: 1.3rem var(--text-font);
         text-align: center;
     }
