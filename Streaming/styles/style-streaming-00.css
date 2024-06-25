@@ -214,8 +214,7 @@ a {
 }
 
 .tab-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
 }
 
 .tab-1__img {
@@ -333,6 +332,18 @@ td i {
     display: none;
 }
 
+/* ----- Tabs hide ----- */
+#tab-1__content,
+#tab-2__content,
+#tab-3__content {
+    display: none;
+}
+
+.tab-shows {
+    display: flex !important; 
+}
+
+
 /* ##### Footer ##### */
 
 footer {
@@ -368,6 +379,7 @@ footer a {
 .footer__links li {
     padding-block: .3rem;
 }
+
 
 /* ##### Media queries and Media types #####*/
 
@@ -523,6 +535,17 @@ footer a {
     .tab-3__btn {
         text-transform: uppercase;
         cursor: pointer;
+    }
+
+    /* ----- Hide plans ----- */
+    #plan-1__content,
+    #plan-2__content,
+    #plan-3__content {
+        display: none;
+    }
+
+    .plan-shows {
+        display: flex !important;
     }
 
     /* ----- Footer -----*/

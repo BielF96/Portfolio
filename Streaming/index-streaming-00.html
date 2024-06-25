@@ -35,19 +35,19 @@
     </section>
     <section class="info">
         <div class="info__icons">
-            <div class="icon icon--red-border">
+            <div id="tab-1" class="icon icon--red-border">
                 <i class="fa-solid fa-door-open"></i>
                 <p class="icon__text">
                     Cancel at any time
                 </p>
             </div>
-            <div class="icon">
+            <div id="tab-2" class="icon">
                 <i class="fa-solid fa-mobile-screen-button icon__wacth"></i>
                 <p class="icon__text">
                     Watch anywhere
                 </p>
             </div>
-            <div class="icon">
+            <div id="tab-3" class="icon">
                 <i class="fa-solid fa-tags icon__price"></i>
                 <p class="icon__text">
                     Pick your price
@@ -56,7 +56,7 @@
         </div>
     </section>
     <section class="tabs">
-        <!-- <div class="tabs__content tab-1">
+        <div id="tab-1__content" class="tabs__content tab-1 tab-shows">
             <div class="tab-1__info">
                 <p class="tabs__text">
                     If you decide Netflix isn't for you — no problem. No commitment. Cancel online anytime.
@@ -66,8 +66,8 @@
                 </a>
             </div>
             <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="" class="tab-1__img">
-        </div> -->
-        <!-- <div class="tabs__content tab-2">
+        </div>
+        <div id="tab-2__content" class="tabs__content tab-2">
             <div class="tab-2__info">
                 <p class="tabs__text">
                     Watch TV shows and movies anytime, anywhere — personalized for you.
@@ -105,8 +105,8 @@
                     </p>
                 </div>
             </div>
-        </div> -->
-        <div class="tabs__content tab-3">
+        </div>
+        <div id="tab-3__content" class="tabs__content tab-3">
             <div class="tab-3__info">
                 <p class="tabs__text">
                     Choose one plan and watch everything on Netflix
@@ -185,11 +185,11 @@
                 </div>
                 <div class="tab-3__content">
                     <div class="plans">
-                        <div class="plan-1 bg--red">Basic</div>
-                        <div class="plan-2">Standard</div>
-                        <div class="plan-3">Premium</div>
+                        <div id="plan-1" class="plan bg--red">Basic</div>
+                        <div id="plan-2" class="plan">Standard</div>
+                        <div id="plan-3" class="plan">Premium</div>
                     </div>
-                    <div class="basic-plan">
+                    <div id="plan-1__content" class="basic-plan plan__content plan-shows">
                         <p>
                             HD Available
                             <i class="fa-solid fa-x"></i>
@@ -221,7 +221,7 @@
                             $8.99
                         </h3>
                     </div>
-                    <div class="standard-plan">
+                    <div id="plan-2__content" class="standard-plan plan__content">
                         <p>
                             HD Available
                             <i class="fa-solid fa-check"></i>
@@ -253,7 +253,7 @@
                             $12.99
                         </h3>
                     </div>
-                    <div class="premium-plan">
+                    <div id="plan-3__content" class="premium-plan plan__content">
                         <p>
                             HD Available
                             <i class="fa-solid fa-check"></i>
@@ -359,5 +359,6 @@
             </div>
         </div>
     </footer>
+    <script src="./javascript/main.js"></script>
 </body>
 </html>
